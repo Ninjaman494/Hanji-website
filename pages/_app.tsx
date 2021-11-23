@@ -19,8 +19,15 @@ export default class MyApp extends App {
         },
       },
       typography: {
+        fontFamily: [
+          'Lato',
+          'Roboto',
+          '"Helevetica Neue"',
+          'Arial',
+          'sans-serif',
+        ].join(','),
         h1: {
-          fontSize: '5rem',
+          fontSize: '2.5rem',
           fontWeight: 500,
         },
         h3: {
@@ -30,7 +37,7 @@ export default class MyApp extends App {
           fontWeight: 500,
         },
         body1: {
-          fontSize: '1.5rem',
+          fontSize: '1.25rem',
         },
       },
     });

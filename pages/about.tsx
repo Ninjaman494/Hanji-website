@@ -54,11 +54,9 @@ const AboutPage: FC<Props> = ({ title, sections, companySection }) => {
       </Head>
       <ScrollAppBar />
       <HeroSection>
-        <Container maxWidth="md" style={styles.container}>
-          <Typography variant="h1" align="center">
-            {RichText.asText(title)}
-          </Typography>
-        </Container>
+        <Typography variant="h1" align="center">
+          {RichText.asText(title)}
+        </Typography>
       </HeroSection>
       <Slices slices={sections} />
       <Box pt={16} pb={16}>
@@ -89,10 +87,6 @@ const styles: StyleSheet = {
     display: 'flex',
     alignContent: 'center',
     flexDirection: 'column',
-  },
-  container: {
-    display: 'flex',
-    alignItems: 'center',
   },
 };
 

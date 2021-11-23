@@ -26,10 +26,12 @@ const HeroContent: FC<HeroContentProps> = ({
   onWaitClick,
 }) => {
   return (
-    <Box mt={8} color="white">
+    <Box color="white">
       <Grid container spacing={5} direction="column">
         <Grid item>
-          <Typography variant="h1">{RichText.asText(title)}</Typography>
+          <Typography variant="h1" gutterBottom>
+            {RichText.asText(title)}
+          </Typography>
           <Typography variant="body1" style={styles.secondaryText}>
             {RichText.asText(description)}
           </Typography>

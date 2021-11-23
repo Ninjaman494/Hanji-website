@@ -5,7 +5,6 @@ import {
   HeroSection,
   ScrollAppBar,
   Slices,
-  StyleSheet,
   RepoCard,
   RepoCardProps,
 } from '@components';
@@ -82,11 +81,9 @@ const OSSPage: FC<Props> = ({ title, sections, repoSection }) => {
       </Head>
       <ScrollAppBar />
       <HeroSection>
-        <Container maxWidth="md" style={styles.container}>
-          <Typography variant="h1" align="center">
-            {RichText.asText(title)}
-          </Typography>
-        </Container>
+        <Typography variant="h1" align="center">
+          {RichText.asText(title)}
+        </Typography>
       </HeroSection>
       <Slices slices={sections} />
       <Box pt={16} pb={16} bgcolor={grey[100]}>
@@ -113,19 +110,6 @@ const OSSPage: FC<Props> = ({ title, sections, repoSection }) => {
       <FooterSection />
     </div>
   );
-};
-
-const styles: StyleSheet = {
-  centered: {
-    display: 'flex',
-    alignContent: 'center',
-    flexDirection: 'column',
-  },
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    position: 'relative',
-  },
 };
 
 export default OSSPage;

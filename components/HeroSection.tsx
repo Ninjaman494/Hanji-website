@@ -1,8 +1,12 @@
-import React, { FC } from 'react';
-import { Box, Toolbar, useTheme } from '@material-ui/core';
+import React, { FC, ReactNode } from 'react';
+import { Box, Container, Toolbar, useTheme } from '@material-ui/core';
 import { StyleSheet } from '@components';
 
-const HeroSection: FC = ({ children }) => {
+interface HeroSectionProps {
+  children: NonNullable<ReactNode>;
+}
+
+const HeroSection: FC<HeroSectionProps> = ({ children }) => {
   const { palette } = useTheme();
 
   return (
@@ -15,7 +19,9 @@ const HeroSection: FC = ({ children }) => {
         height="60vh"
         display="flex"
       >
-        {children}
+        <Container maxWidth="md" style={styles.container}>
+          {children}
+        </Container>
       </Box>
       <div style={styles.endWave}>
         <svg
@@ -34,6 +40,11 @@ const HeroSection: FC = ({ children }) => {
 };
 
 const styles: StyleSheet = {
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
   endWave: {
     height: 150,
     overflow: 'hidden',
